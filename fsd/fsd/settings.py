@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os.path
 from pathlib import Path
+from django.contrib import messages
 # import env
 
 # env = env.Env()
@@ -31,18 +32,33 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTHENTICATION_BACKENDS = {
+    'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
+}
 
 # Application definition
 
 INSTALLED_APPS = [
+    # 'course.apps.CourseConfig',
+    'embed_video',
+    'course',
+    'experts', 
+
+    'allauth',
+    'allauth.account',
+     'allauth.socialaccount',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'course'
+    'django.contrib.sites',
+    
 ]
+
+SITE_ID= 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -59,7 +75,7 @@ ROOT_URLCONF = 'fsd.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR.joinpath('templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,8 +141,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS=[os.path.join(BASE_DIR,"static")]
+MEDIA_URL="/media/"
+MEDIA_ROOT=os.path.join(BASE_DIR,'media_cdn')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ACCOUNT_ADAPTER = "experts.account_adapter.NoNewUsersAccountAdapter"

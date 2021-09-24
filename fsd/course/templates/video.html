@@ -1,0 +1,44 @@
+{% extends 'basic.html' %}
+{% load embed_video_tags %}
+{% load static %}
+
+{% block title %}Paramount{% endblock %}
+
+{% block body %}
+    <section class="Video">
+        <h2 class="videotopic">{{ head }}</h2>
+        
+        
+        <div class="row">
+            <div class="col-lg-4 col-md-3 mx-auto selection justify-content-center">
+                {% for item in videos %}
+                <div class="card mx-auto mb-4">
+                    <a href="{% url 'video' topicName=topicid videoid=item.videoid %}" >
+                    <div class="card-body">
+                        <h4 class="card-title text-align-center">{{ item.title }}</h4>
+                        
+                        
+                        
+                        <!-- <p class="card-text">{{ item.date }}</p> -->
+                    </div>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="col-lg-8 col-md-9">
+                <div class="yt-video" width="80%"></div>
+                {% for items in loadedvideo %}
+                <div width="90%">{% video items.url '700x450' %}</div>
+                <div >
+                    <h2 class="videodesc">{{ items.title }}</h2>
+                    <h5>{{ items.description }}</h5>
+                </div>
+                {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

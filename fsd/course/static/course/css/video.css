@@ -1,0 +1,32 @@
+
+  .videotopic{
+    text-align: center;
+    padding: 7% 0 2% 0;
+    margin-bottom: 0;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: white;
+    background: #063460; 
+}
+
+.selection{
+  
+  padding: 1% 2% 0 2%;
+  background: #E1F5F2;
+
+}
+
+a{
+  text-decoration: none;
+}
+
+.yt-video{
+    margin: auto;
+    padding: 2%;
+ 
+}
+
+.videodesc{
+    text-align: left;
+}
+

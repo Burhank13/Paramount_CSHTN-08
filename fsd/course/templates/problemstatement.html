@@ -1,0 +1,122 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}PS Assignments{% endblock %}
+
+{% block body %}
+
+
+ <style type="text/css">
+
+
+body{
+    background: #ffffff;
+}
+
+.contact-form h4{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    text-align: center;
+    color: #ffff;
+}
+
+
+.contact-form label{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    text-align: center;
+    color: #ffff;
+}
+
+.contact-form{
+    background: #5A5D9D;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    width: 70%;
+}
+.contact-form .form-control{
+    border-radius:1rem;
+}
+.contact-image{
+    text-align: center;
+}
+.contact-image img{
+    border-radius: 6rem;
+    width: 11%;
+    margin-top: -3%;
+    transform: rotate(29deg);
+}
+.contact-form form{
+    padding: 14%;
+}
+.contact-form form .row{
+    margin-bottom: -7%;
+}
+.contact-form h3{
+    margin-bottom: 4%;
+    margin-top: -10%;
+    text-align: center;
+    color: #ffff;
+}
+.contact-form .btnContact {
+    width: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1.5%;
+    background: #390050;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btnContactSubmit
+{
+    width: 50%;
+    border-radius: 1rem;
+    padding: 1.5%;
+    color: #fff;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+
+  </style>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container contact-form">
+           
+            <form method="post" id="contactForm" name="contactForm">{% csrf_token%}
+                <h3>PROBLEM STATEMENTS</h3>
+                {% for q  in questions%}
+                <label>SUBJECT : </label><br>
+                <label for="subject">{{q.subject}}</label><br>
+                <label>PROBLEM STATEMENT 1 : </label>
+                <label for="p1">{{q.p1}}</label><br>
+                <label>PROBLEM STATEMENT 2 : </label>
+                <label for="p2">{{q.p2}}</label><br>
+
+                {% endfor %}
+                
+
+                <div class="container">
+               
+                <a href="{% url 'assignment' %}" role="button" class="btn btn-primary px-5 font-weight-bold text-white login-button">TAKE THE ASSIGNMENT</a>
+                </div>
+            </form>
+            
+
+
+        
+</div>
+
+
+
+
+
+{% endblock %}

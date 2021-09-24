@@ -1,0 +1,55 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}Paramount{% endblock %}
+
+{% block body %}
+
+
+
+    <header class="about-header">
+        <div class="row">
+            <div class="col-lg-7">
+                <h1>We share knowledge with the world</h1>
+            </div>
+            <div class="col-lg-5">
+                <div class="image">
+                    <img class="about-img" src="./static/course/images/subjects/about.png" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="about-content" >
+        <h1 class="about-mb">Leadership and learning are <br> indispensable to each other.</h1>
+        <h4 class="about-mb">Whether you want to learn or to share what you know, you’ve come to the right place. <br> As a global destination for online learning, we connect people through knowledge.</h4>
+        <a class="blue-btn" href="{% url 'home' %}">Learn More</a>
+
+        <div class="row about-cards">
+            <div class="col-lg-4 col-md-6" >
+                <div class="card card-1" style="width: 95%;">
+                    <div class="card-body">
+                      <h5 class="card-title">Quiz</h5>
+                      <p class="card-text">Take this interactive quiz to help you find out how self-motivated you are so that you can motivate yourself effectively, and get more things done.</p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6" >
+                <div class="card card-2" style="width: 95%;">
+                    <div class="card-body">
+                      <h5 class="card-title">Assignments</h5>
+                      <p class="card-text">The motivation is to gain enough knowledge and understand that part of curriculum well. <br>You must have a deep understanding of the topic before doing the assignment. </p>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6" >
+                <div class="card card-3 " style="width: 95%;">
+                    <div class="card-body">
+                      <h5 class="card-title">E-learning</h5>
+                      <p class="card-text">Upgrade your education with courses in the fields of Web Development. <br>Study whenever you want, however you want and at a speed that suits you.</p>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

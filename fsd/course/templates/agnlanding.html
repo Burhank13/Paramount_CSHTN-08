@@ -1,0 +1,113 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block title %}Paramount{% endblock %}
+
+{% block body %}
+
+<div class="row about-cards">
+  <div class="col-lg-4 col-md-6" >
+    <a href="{% url 'problemstatement' topicid='1' %}">
+      <div class="card card-1" style="width: 85%;">
+          
+          <div class="card-body">
+            <h5 class="card-title">HTML</h5>
+            <p class="card-text">Take this interactive assignment to help you find out how self-motivated you are so that you can motivate yourself effectively, and get more things done.</p>
+          </div>
+        </div>
+        </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+    <a href="{% url 'problemstatement' topicid='2'%}">
+      <div class="card card-2" style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">CSS</h5>
+            <p class="card-text">The motivation is to gain enough knowledge and understand that part of curriculum well. <br>You must have a deep understanding of the topic before doing the assignment. </p>
+          </div>
+
+        </div>
+      </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+      <a href="{% url 'problemstatement' topicid='3'%}">
+      <div class="card card-3 " style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">Bootstrap</h5>
+            <p class="card-text">Upgrade your education with courses in the fields of Web Development. <br>Study whenever you want, however you want and at a speed that suits you.</p>
+          </div>
+        </div>
+          </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+    <a href="{% url 'problemstatement' topicid='4' %}">
+      <div class="card card-1" style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">JavaScript</h5>
+            <p class="card-text">Take this interactive assignment to help you find out how self-motivated you are so that you can motivate yourself effectively, and get more things done.</p>
+          </div>
+        </div>
+        </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+    <a href="{% url 'problemstatement' topicid='5'%}">
+      <div class="card card-2" style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">Django</h5>
+            <p class="card-text">The motivation is to gain enough knowledge and understand that part of curriculum well. <br>You must have a deep understanding of the topic before doing the assignment. </p>
+          </div>
+
+        </div>
+      </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+      <a href="{% url 'problemstatement' topicid='6'%}">
+      <div class="card card-3 " style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">Git GitHub</h5>
+            <p class="card-text">Upgrade your education with courses in the fields of Web Development. <br>Study whenever you want, however you want and at a speed that suits you.</p>
+          </div>
+        </div>
+        </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+    <a href="{% url 'problemstatement' topicid='7' %}">
+      <div class="card card-1" style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">MongoDB</h5>
+            <p class="card-text">Take this interactive assignment to help you find out how self-motivated you are so that you can motivate yourself effectively, and get more things done.</p>
+          </div>
+        </div>
+        </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+    <a href="{% url 'problemstatement' topicid='8'%}">
+      <div class="card card-2" style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">React JS</h5>
+            <p class="card-text">The motivation is to gain enough knowledge and understand that part of curriculum well. <br>You must have a deep understanding of the topic before doing the assignment. </p>
+          </div>
+
+        </div>
+      </a>
+  </div>
+  <div class="col-lg-4 col-md-6" >
+      <a href="{% url 'problemstatement' topicid='9' %}">
+      <div class="card card-3 " style="width: 85%;">
+
+          <div class="card-body">
+            <h5 class="card-title">Firebase</h5>
+            <p class="card-text">Upgrade your education with courses in the fields of Web Development. <br>Study whenever you want, however you want and at a speed that suits you.</p>
+          </div>
+        </div>
+          </a>
+  </div>
+
+</div>
+ {% endblock %}
